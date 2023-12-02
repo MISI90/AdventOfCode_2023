@@ -53,6 +53,7 @@ public abstract class PuzzleSolverTest {
      */
     protected abstract String getExpectedPuzzle2Result();
 
+    @SuppressWarnings({"rawtypes", "unchecked"})
     @BeforeAll
     public void loadSolverInstance() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         Class clazz = Class.forName(this.getClass().getPackageName() + "." + SOLVER_CLASS_PREFIX + getDay());
